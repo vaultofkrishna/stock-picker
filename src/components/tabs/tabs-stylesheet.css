@@ -1,0 +1,26 @@
+.sub-nav-holder {
+    background: var(--sub-nav-bg);
+    color: var(--sub-nav-text);
+    box-shadow: 0 14px 12px -17px rgb(29 40 62 / 40%);
+    font-size: 1.4rem;
+    padding: 10px !important;
+}
+.sub-nav-holder ul {
+    padding: 0 20px;
+    list-style: none;
+    margin: 0;
+}
+.sub-nav-holder li {
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    padding: 8px 0 4px;
+    margin: 0 16px;
+    border-bottom: 2px solid transparent;
+    color: var(--ink-700);
+    cursor: pointer;
+}
+
+.sub-nav-holder li.active {
+    color: var(--link);
+}

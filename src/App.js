@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Head from './components/head';
+import Results from './components/results';
 
 function App() {
+  const [symbols, updateSymbols] = useState([]);
+  let [activeSymbol, setActiveSymbol] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head addSymbol={updateSymbols} symbols={symbols} setActiveSymbol={setActiveSymbol}/>
+      {symbols.length > 0 && <Results options={symbols} activeSymbol={activeSymbol} setActiveSymbol={setActiveSymbol} removeSymbol={updateSymbols}/>}
     </div>
   );
 }
